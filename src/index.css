@@ -70,3 +70,26 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+body {
+  overflow-x: hidden !important;
+}
+
+.text-line-through {
+  display: flex;
+  flex-direction: row;
+  color: #6b7280 !important;
+}
+.text-line-through:before, .text-line-through:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: .3px solid;
+  border-color: #6b728024;
+  margin: auto;
+}
+.text-line-through:before {
+  margin-right: 10px
+}
+.text-line-through:after {
+  margin-left: 10px
+}

@@ -14,24 +14,24 @@ export const Progress: FC<ProgressProps> = ({ missions, remainingDuration, durat
 
   return (
     <div className="bg-white rounded-2xl p-4 shadow-sm">
-      <h2 className="text-lg font-semibold mb-4">Tiến độ học</h2>
+      <h2 className="text-lg font-extrabold mb-4">Tiến độ học</h2>
       
       <div className="space-y-4">
-        <div className="flex justify-between items-center">
-          <span className="text-gray-600 text-sm">Số ngày còn lại</span>
+        <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+          <span className="text-gray-600 text-sm font-bold">Số ngày còn lại</span>
           <span className="text-gray-900">{remainingDuration}/{duration} ngày</span>
         </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-gray-600 text-sm">Số cúp đã đạt</span>
+        <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+          <span className="text-gray-600 text-sm font-bold">Số cúp đã đạt</span>
           <div className="flex items-center gap-1">
-            <Trophy className="w-4 h-4 text-yellow-400" />
+            <Trophy className="w-5 h-5 text-yellow-400" />
             <span className="text-gray-900">{missions.earned_cups}/{missions.total_cups}</span>
           </div>
         </div>
 
         <div>
-          <p className="text-gray-600 text-sm mb-2">Số Unit đạt 02 cúp/ Tổng số Unit</p>
+          <p className="text-gray-600 text-sm mb-2 font-bold">Số Unit đạt 02 cúp/ Tổng số Unit</p>
           
           <div className="relative h-4 bg-gray-100 rounded-full overflow-hidden">
             {/* Expected Progress */}
@@ -48,12 +48,12 @@ export const Progress: FC<ProgressProps> = ({ missions, remainingDuration, durat
 
           <div className="mt-2 space-y-1">
             <div className="flex items-center gap-2 text-sm">
-              <span className="w-2 h-2 rounded-full bg-green-500"></span>
+              <span className="w-3 h-3 rounded-full bg-green-500"></span>
               <span className="text-gray-600">Thực tế:</span>
               <span className="text-gray-900">{missions.actual_completed_units}/{missions.total_units} Units</span>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+              <span className="w-3 h-3 rounded-full bg-blue-500"></span>
               <span className="text-gray-600">Kế hoạch:</span>
               <span className="text-gray-900">{missions.expected_completed_units}/{missions.total_units} Units</span>
             </div>
